@@ -10,3 +10,5 @@
 Makefile
 depend
 zarith_version.ml
+_build
+.merlin
