@@ -846,6 +846,5 @@ let test_Q () =
 
 (* main *)
 
-let () = set_binary_mode_out stdout true
 let _ = test_Z()
 let _ = test_Q()

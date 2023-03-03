@@ -61,6 +61,5 @@ let usage () =
 
 let _ =
   let args = Sys.argv in
-  set_binary_mode_out stdout true;
   if Array.length args <> 2 then usage () else
   digits (int_of_string Sys.argv.(1))
