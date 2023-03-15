@@ -20,8 +20,11 @@ jobs:
           - macos-lastest
         ocaml-compiler:
           - 4.14.x
-          - 5.0.x
         include:
+          - os: ubuntu-latest
+            ocaml-compiler: 5.0.x
+          - os: macos-lastest
+            ocaml-compiler: 5.0.x
           - os: windows-latest
             ocaml-compiler: ocaml.5.0.0,ocaml-option-mingw
 
