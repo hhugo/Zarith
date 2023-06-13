@@ -12,3 +12,5 @@ depend
 zarith_version.ml
 _build
 .merlin
+c-flags.sexp
+library-flags.sexp
