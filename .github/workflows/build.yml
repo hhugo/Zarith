@@ -28,15 +28,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name  : Use OCaml ${{ matrix.ocaml-compiler }}
-        uses: ocaml/setup-ocaml@v2
-        if: runner.os != 'Windows'
-        with:
-          ocaml-compiler: ${{ matrix.ocaml-compiler }}
-          dune-cache: true
-          opam-depext: true
-          opam-depext-flags: --with-test
-
       - name: Set-up OCaml ${{ matrix.ocaml-compiler }}
         uses: kit-ty-kate/setup-ocaml@win52
         with:
