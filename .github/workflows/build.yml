@@ -35,8 +35,10 @@ jobs:
           dune-cache: true
           allow-prerelease-opam: true
 
+      - run: opam install . --with-test --deps-only
+
       - name: configure tree
-        run: opam exec -- ./configure
+        run: opam exec -- sh ./configure
 
       - name: Build
         run: opam exec -- make
