@@ -31,6 +31,8 @@ jobs:
       - name: Set-up OCaml ${{ matrix.ocaml-compiler }}
         uses: kit-ty-kate/setup-ocaml@win52
         with:
+          opam-repositories: |
+            default: https://github.com/hhugo/opam-repository.git#gmp-mingw
           ocaml-compiler: ${{ matrix.ocaml-compiler }}
           dune-cache: true
           allow-prerelease-opam: true
