@@ -35,6 +35,7 @@ jobs:
             default: https://github.com/hhugo/opam-repository.git#gmp-mingw
           ocaml-compiler: ${{ matrix.ocaml-compiler }}
           dune-cache: true
+          cache-prefix: "z1"
           allow-prerelease-opam: true
 
       - run: opam install . --with-test --deps-only
