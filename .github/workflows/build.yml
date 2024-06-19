@@ -29,13 +29,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set-up OCaml ${{ matrix.ocaml-compiler }}
-        uses: ocaml/setup-ocaml@v3.0.0-alpha
+        uses: hhugo/setup-ocaml@cyg
         with:
           opam-repositories: |
             default: https://github.com/hhugo/opam-repository.git#gmp-mingw
           ocaml-compiler: ${{ matrix.ocaml-compiler }}
           dune-cache: true
-          cache-prefix: "z1"
           allow-prerelease-opam: true
 
       - run: opam install -v . --with-test --deps-only
