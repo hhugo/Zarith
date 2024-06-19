@@ -38,7 +38,7 @@ jobs:
           cache-prefix: "z1"
           allow-prerelease-opam: true
 
-      - run: opam install . --with-test --deps-only
+      - run: opam install -v . --with-test --deps-only
 
       - name: configure tree
         run: opam exec -- sh ./configure
