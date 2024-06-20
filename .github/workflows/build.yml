@@ -39,7 +39,7 @@ jobs:
           allow-prerelease-opam: true
 
       - run: bash -c "rm -rf D:/cygwin/var/log"
-        if: runner.os = "Windows"
+        if: runner.os == 'Windows'
 
       - run: opam install -v . --with-test --deps-only
 
