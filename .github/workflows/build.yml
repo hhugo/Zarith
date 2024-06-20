@@ -34,7 +34,6 @@ jobs:
           opam-repositories: |
             default: https://github.com/hhugo/opam-repository.git#gmp-mingw
           ocaml-compiler: ${{ matrix.ocaml-compiler }}
-          dune-cache: true
           cache-prefix: "z1"
           allow-prerelease-opam: true
 
@@ -42,7 +41,9 @@ jobs:
 
       - name: wintest
         run: |
-          bash -c "ls D:/cygwin/var/log"
+          bash -c "ls C:\hostedtoolcache\windows\cygwin\3.5.3\x86_64\setup-x86_64.exe"
+          bash -c "mkdir -p D:/.opam/.cygwin"
+          bash -c "cp C:\hostedtoolcache\windows\cygwin\3.5.3\x86_64\setup-x86_64.exe D:/.opam/.cygwin/"
           bash -c "ls D:/.opam/"
           bash -c "ls D:/.opam/.cygwin"
           bash -c "ls D:/cygwin/var/log"
