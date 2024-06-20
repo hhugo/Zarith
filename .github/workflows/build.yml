@@ -38,7 +38,15 @@ jobs:
           cache-prefix: "z1"
           allow-prerelease-opam: true
 
-      - run: bash -c "rm -rf D:/cygwin/var/log"
+
+
+      - name: wintest
+        run: |
+          bash -c "ls D:/cygwin/var/log"
+          bash -c "ls D:/.opam/"
+          bash -c "ls D:/.opam/.cygwin"
+          bash -c "ls D:/cygwin/var/log"
+          bash -c "rm -rf D:/cygwin/var/log"
         if: runner.os == 'Windows'
 
       - run: opam install -v . --with-test --deps-only
